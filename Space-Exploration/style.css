@@ -1,3 +1,43 @@
 body {
-  background-image : url("./static/universe.webp");
+  font-family: Orbitron ,sans-serif;
+  margin : 0px;
+  text-align: center;
+}
+#hero-section {
+  background-image : url("../static/animated.gif");
+  background-size : cover; /* cover makes sure the image covers the entire section */
+  background-repeat: no-repeat;
+  background-position : center center;
+  min-height : 75vh;
+  color : white;
+  font-family: Orbitron ,sans-serif; /*Orbitron is from google fonts*/
+  height : 50px;
+  padding : 10px 0 30px 0;
+}
+#title {
+  text-shadow : 0px 0px 20px black; /* first val decides the vertical alignment of shadow (left / right) similarly second val is for horizontal align and 3rd is for blur effect and lastly 4th val  is our choice of color*/
+}
+
+.btn{
+  padding : 5px 15px;
+  border-radius: 20px;
+  background-color: white;
+  border : 2px solid violet;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+/*Here .underline is a utility class ( used to add a single css property to any element ) */
+.underline{
+  border-bottom : 3px solid white;
+}
+
+.logo{
+  width : 100px;
+  margin-top : 20px;
+}
+#emoji{
+  display : flex;
+  justify-content : center;
 }
