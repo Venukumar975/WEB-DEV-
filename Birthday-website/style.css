@@ -63,3 +63,8 @@ h1,h2,h3,h4,p{
     background-image: url("../static/excitement.gif");
     background-color: black;
 }
+#footer {
+    
+    width: 400px;
+    margin: 40px auto;
+}
