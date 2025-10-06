@@ -1,7 +1,10 @@
 Hello 
 This is What I learned from this Project
 
+
                                              *** HANDLING FLEX BOX  ***
+
+
 div
     div
         item1
@@ -27,7 +30,8 @@ And if u want these items to move in vertical direction use align-items
     display : flex;
     justify-content : center;
     align-items : end;
-}
+
+
 
 The above css makes sure that the items are placed side by side and are at the center of the container and touches the bottom of the container
 
@@ -42,9 +46,40 @@ it has 2 val's ( row or col ) by def it is row so if u change it into col then t
 
 
 
-                         *** linear- gradient ****
+                                                      *** linear- gradient ****
+
+
 
 This is a css function applied for background, background :linear-gradient()
 here it takes 2 arguments ;
-first one is the color we want to start with and 2nd is the color that our 1st
-color fades into 
+first one is the color we want to start with and 2nd is the color that our 1stcolor fades into 
+
+
+                                                     *** hover pseudo class ***
+
+
+we can do something for id's and classes for images like when we hover over them we can change their background or color or any other properties , this is acheived by this hover pseudo class
+#any:hover{
+background-image : url("");
+}
+
+
+                                              *** Grouping selectors *** 
+
+
+
+say we want to target h1 , h2 , h3 ,h4 tags .
+Initially 
+h1{
+
+}
+h2 {
+
+}
+h3 {
+}
+ But all together we can write them as ;
+h1,h2,h3,h4 {
+
+}
+This is called grouping selectors
