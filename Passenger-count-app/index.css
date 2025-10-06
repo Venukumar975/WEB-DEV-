@@ -1,0 +1,43 @@
+body {
+    background-image: url("../static/subway-passenger.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    text-align: center;
+    color : whitesmoke;
+    text-align: center;
+}
+#incrementer {
+    margin : 200px auto;
+    background-color: rgba(209, 173, 173, 0.5);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+}  
+#header {
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+#count-el {
+    font-size: 50px;
+    margin: 20px 0;
+    color : rgb(24, 21, 21)
+
+}
+#btn-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    height : 30px;
+    width: 120px;
+    max-width: 100%;
+    border-radius: 40px;
+    border: 3px solid black;
+    font-weight: bold;
+    cursor: pointer;
+}
