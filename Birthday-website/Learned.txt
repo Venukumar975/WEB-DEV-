@@ -1,0 +1,41 @@
+Hello 
+This is What I learned from this Project
+
+                                             *** HANDLING FLEX BOX  ***
+div
+    div
+        item1
+        item2
+        item3
+    /div
+/div
+
+The above code builts us a container having 3 items (think of them as emojis or a img ) , Now by default our div shows them as stack of items
+which are top of each other so if u want to display them like side by side (item1 item2 item3) u must use flex BOX
+{
+    display : flex;
+}
+
+This helps us to acheive showing these items side by side but they will be very close , so now u can move them to the extreme left or right or at the center
+by using another parameter called justify-content also u can add space between them using this.
+{
+    display : flex;
+    justify-content : center;
+}
+And if u want these items to move in vertical direction use align-items
+{
+    display : flex;
+    justify-content : center;
+    align-items : end;
+}
+
+The above css makes sure that the items are placed side by side and are at the center of the container and touches the bottom of the container
+
+### Now if u want to do all of these actions but while stacking them on top of each other , We should use something called ""flex-direction"
+it has 2 val's ( row or col ) by def it is row so if u change it into col then the functionalities of justify-content and align-items gets reversed
+
+**** Note : justify-content and align-items only work withing a flex box not for div 
+{
+    justify-content : center;
+    align-items : end;
+}                                ---- This wont work since u havent mentioned flex;
