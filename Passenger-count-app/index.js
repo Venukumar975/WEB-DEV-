@@ -31,7 +31,7 @@ function increment() {
    //document.getElementById("count-el").innerText = count 
    countEl.innerText = count  
 }
-function save(){
-    console.log(count)
+function decrement(){
+    countEl.innerText -= 1
 }
 
