@@ -39,3 +39,12 @@ it has 2 val's ( row or col ) by def it is row so if u change it into col then t
     justify-content : center;
     align-items : end;
 }                                ---- This wont work since u havent mentioned flex;
+
+
+
+                         *** linear- gradient ****
+
+This is a css function applied for background, background :linear-gradient()
+here it takes 2 arguments ;
+first one is the color we want to start with and 2nd is the color that our 1st
+color fades into 

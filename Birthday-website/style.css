@@ -2,7 +2,8 @@ body {
     font-family: happy monkey, sans-serif;
     text-align: center;
     border : 0px;
-    background-color: rgb(58, 146, 172);
+    /*background-color: rgb(58, 146, 172); */
+    background: linear-gradient(rgb(58, 58, 178),pink);
     color : white;
 
 }
@@ -12,7 +13,6 @@ body {
     height : 300px
 }
 .container {
-    background-color: rgb(58, 146, 172);
     color : white;
     padding : 10px 0;
 }
