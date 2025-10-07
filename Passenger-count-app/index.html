@@ -8,14 +8,23 @@
 
 </head>
 <body>
-    <div id = "incrementer">
-        <h1 id = "header"> People Entered </h1>
-        <h2 id = "count-el"> 0 </h2>
-        <div id = "btn-div">
-            <button id = "increment-btn" onclick = "increment()"> Increment </button>
-            <button id = "decrement-btn" onclick = "decrement()"> Decrement </button>
+    <div class = "container">
+        <div id = "incrementer">
+            <h1 id = "header"> People Entered </h1>
+            <h2 id = "count-el"> 0 </h2>
+            <div id = "btn-div">
+                <button id = "increment-btn" onclick = "increment()"> Increment </button>
+                <button id = "decrement-btn" onclick = "decrement()"> Decrement </button>
+            </div>
         </div>
-    </div>
+        <div id = "notes">
+           <div id = "saved-entries">
+                <h3> Saved Entries : </h3>
+                <p style = 'font-size : 30px' id = "save-el"> </p>
+           </div>
+           <button style = "margin-top : auto" id = "save-btn"onclick = "save()"> Save </button>
+        </div>
+    </div> 
     <script src = "index.js"></script>
     
 </body>

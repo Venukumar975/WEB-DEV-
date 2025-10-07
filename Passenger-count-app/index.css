@@ -28,6 +28,15 @@ body {
     justify-content: center;
     align-items: center;
 }
+#saved-entries {
+
+   height: 200px;
+   width : 180px;
+   background-color : white;
+   color : black;
+   border : 2px solid black;
+   border-radius: 20px;
+}
 
 #notes {
     word-break: break-word;

@@ -32,6 +32,11 @@ function increment() {
    countEl.innerText = count  
 }
 function decrement(){
-    countEl.innerText -= 1
+    count -= 1
+    countEl.innerText = count
 }
 
+let SaveEL = document.getElementById("save-el")
+function save(){
+    SaveEL.innerText += count + " , "
+}
