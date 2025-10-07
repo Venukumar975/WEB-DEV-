@@ -1,0 +1,63 @@
+
+html,body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 30px;
+    background-color: whitesmoke;
+    font-size: 30px;
+    
+    
+}
+.Board {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(161, 116, 204);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items : center;
+    min-height: 100vh;
+    height : 300px;
+    width : 700px;
+    margin : 0px;
+    padding : 30px;
+    border-radius: 30px;
+    border : 5px solid black;
+
+}
+.scorecard{
+    height : 300px;
+    width : 300px;
+    border : 2px solid rgb(215, 206, 215);
+    border-radius : 20px;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin : 20px 40px;
+    background: linear-gradient(brown,pink);
+}
+.score {
+    height : 200px;
+    width: 200px;
+    border : 2px solid red;
+    border-radius: 20px;
+    margin-bottom : 20px;
+    display: flex;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    color : whitesmoke
+
+}
+button {
+    height : 40px;
+    width : 50px;
+    border-radius: 20px;
+    margin : 0 10px;
+    margin-bottom : 10px;
+    font-weight: 600;
+    border : 3px solid blue;
+    
+}
