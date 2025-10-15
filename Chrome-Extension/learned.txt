@@ -1,0 +1,40 @@
+1 . linear-gradient can be applied for background not for background-color 
+
+2 . USE OF box-sizing (The box-sizing property "defines how the total size of an element is calculated "— i.e., whether width and height include padding and border or not.)
+    say button {
+        height : 120px;
+        width : 200px;
+        padding : 20px;
+        border : 5px;
+    }
+
+    In General case we expect our buttong to have a width and heght of 
+    200px and 120px , but thats not the case since browsers use box-sizing : content-box by default 
+    we can expec our width and height to be 200 + (20px + 20px) padding + (5 + 5) border == 250px same for height 120 + 50 == 170px
+
+    So to avoid adding padding and borders again use box-sizing : border-box so we get width and height to be 200px and 120px which includes all padding , border too .
+
+3 . lets say we inserted an <input> element so whenever we enter some text into it if for next insertion we want to clear the previous text to do this use onfocus = "this.value = ' '" property 
+
+4 . lets say we want to extract value from a form like <input> to add or store it in a list what we can use is use .value attribute. First grab the element by its 'id' using getElementById('') then store this in an variable and finally variable.value gives or extracts the text 
+    let inputEl = document.getElementById("input-el")
+    let list = []
+    list.push(inputEl.value)
+
+5 . Say our html page is like this ;
+      <div id = 'Buy'>
+      
+      </div>
+      <p> This offer is valid only till 20xx
+    
+    This block shows user an offer so if the user is interested he can redeem it or use it but the problem is our 'div' doesnt had any element or button to Buy or redeem the offer . So we can add an "html elements to our dom by using .innerHtml "
+    In .js file;
+       let purchase = document.getElementById("Buy")
+       purchase.innerHtml = "<button> Buy </button>"
+    Now this doesnt add text inside div but rather displays a button to help the user buy , Now we can add events to this button like onclick = fun() like that, if u know u know.
+      
+6 . Tip - when we have a choice like repeatedly changing dom or modifying dom like in '5' or a modifying the dom once for all the changes , go for the 2nd option since modifying dom incurs a cost 
+
+7 . 
+   
+    
