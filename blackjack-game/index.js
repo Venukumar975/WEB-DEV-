@@ -1,47 +1,55 @@
-let firstCard = 10
-let secondCard = 7
-let cards = [firstCard, secondCard] // array
-let sum = firstCard + secondCard
-
+// Blackjack game (browser only)
+let cards = []
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 
+const messageEl = document.getElementById("message-el")
+const sumEl = document.getElementById("sum-el")
+const cardsEl = document.getElementById("card-el")
 
-let messageEl = document.getElementById("message-el")
-// let sumEl = document.getElementById("sum-el")
-let sumEl = document.querySelector("#sum-el")   // More dynamic
-let cardsEl = document.querySelector("#card-el")
-
-function StartGame(){
-    RenderGame()
+function randomNumberGenerator() {
+    const randomNumber = Math.floor(Math.random() * 13) + 1
+    if (randomNumber === 1) return 11
+    if (randomNumber > 10) return 10
+    return randomNumber
 }
-function RenderGame(){
+
+function renderGame() {
     sumEl.textContent = "Sum: " + sum
-    // render out all the cards we have
-    cardsEl.textContent = "Cards: "
-    for (let i = 0 ; i <  cards.length ; i++){
-        cardsEl.textContent += cards[i] + " "
-    }
-    if (sum <= 20){
+    cardsEl.textContent = "Cards: " + cards.join(" ")
+
+    if (sum < 21) {
         message = "Do you want to draw a new card?"
-    }
-    else if (sum === 21){
+    } else if (sum === 21) {
         message = "Wohoo! You've got Blackjack!"
         hasBlackJack = true
-    }
-    else{
+        isAlive = false
+    } else {
         message = "You're out of the game!"
         isAlive = false
     }
     messageEl.textContent = message
 }
 
-function NewCard(){
-    console.log("Drawing a new card from the deck!")
-    let card = 6
-    cards.push(card)
-    sum += card
-    StartGame()
+function StartGame() {
+    // initialize a new game
+    isAlive = true
+    hasBlackJack = false
+    cards = [randomNumberGenerator(), randomNumberGenerator()]
+    sum = cards[0] + cards[1]
+    renderGame()
 }
 
+function NewCard() {
+    if (!isAlive || hasBlackJack) return
+    const card = randomNumberGenerator()
+    cards.push(card)
+    sum += card
+    renderGame()
+}
+
+// expose functions to window so onclick in HTML works (if not using modules)
+window.StartGame = StartGame
+window.NewCard = NewCard
