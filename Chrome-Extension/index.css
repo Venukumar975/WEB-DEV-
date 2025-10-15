@@ -1,0 +1,35 @@
+body{
+    margin : 0px;
+    padding : 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color : black;
+}
+
+div{
+    text-align: center;
+}
+
+input {
+  padding : 10px 10px;
+  width : 100%;
+  box-sizing: border-box;
+  height : 40px;
+  border-color: rgb(27, 195, 27);
+  border-radius: 15px;
+  font-size: medium;
+  
+}
+
+button {
+    height : 35px;
+    width : 80px;
+    margin-top : 20px;
+    /* linear-graient works with background not background-color or backgroun-img */
+    background : linear-gradient(to right , rgb(208, 20, 152),rgb(24, 89, 211));
+    color : whitesmoke;
+    font-weight: 600;
+    font-size: medium;
+    border-radius: 15px;
+
+
+}
