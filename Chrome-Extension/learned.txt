@@ -35,6 +35,58 @@
       
 6 . Tip - when we have a choice like repeatedly changing dom or modifying dom like in '5' or a modifying the dom once for all the changes , go for the 2nd option since modifying dom incurs a cost 
 
-7 . 
-   
-    
+7 .  --- Template Strings (Template Literals) in JavaScript (ES6+) ---
+
+                              **Definition:**
+
+            Template strings are a modern way to create strings in JavaScript, enclosed by backticks (`) instead of single or double quotes. They offer a simpler, more readable syntax for complex string construction.
+
+                             **Key Properties:**
+
+            1. **String Interpolation (Embedded Expressions):**
+
+            - Allows variables and JavaScript expressions to be embedded directly within the string.
+            - Syntax: Use the dollar sign and curly braces: ${expression}.
+
+            2. **Multiline Strings:**
+
+            - Enables strings to span multiple lines without needing the newline escape character (\n). The line breaks are preserved exactly as typed.
+
+            3. **Tagged Templates:**
+
+            - An advanced feature where a function (the "tag") can preprocess the template string and its expressions before the final string is constructed, allowing for custom parsing or escaping.
+
+                                **Examples:**
+
+            // 1. String Interpolation
+
+            const product = "Laptop";
+            const price = 999.99;
+
+            const info = `The price of the ${product} is $${price}.`; 
+
+            // Output of 'info': "The price of the Laptop is $999.99."
+
+
+            // 2. Multiline String
+
+            const message = `
+            Hello User,
+
+            Thank you for your order.
+            Your package will arrive soon!
+            `;
+
+            // Output of 'message' will include the preserved line breaks.
+
+
+            // 3. Simple Expression Embedding
+
+            const a = 5;
+            const b = 10;
+
+            const result = `The sum of ${a} and ${b} is ${a + b}.`; 
+
+            // Output of 'result': "The sum of 5 and 10 is 15."
+            
+                

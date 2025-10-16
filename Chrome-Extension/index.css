@@ -3,6 +3,7 @@ body{
     padding : 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color : black;
+    min-width : 400px;
 }
 
 div{
@@ -30,6 +31,24 @@ button {
     font-weight: 600;
     font-size: medium;
     border-radius: 15px;
+}
 
+ul {
+    list-style : none;
+    padding-left : 0px;
+    margin-top: 20px;
 
 }
+
+li {
+     margin-top: 20px;
+
+}
+
+li a {
+
+    color : green;
+}
+
+
+
