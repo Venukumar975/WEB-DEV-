@@ -13,13 +13,33 @@ const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 const deleteBtn = document.getElementById("delete-btn")
 if (leadsFromLocalStorage){
     myLeads = leadsFromLocalStorage
-    renderLeads()
+    render(myLeads)
 }
+
+function render(leads){
+    let listItems = " "
+
+     for (let i = 0;i < leads.length ; i++){
+
+    
+         listItems += `
+         <li>
+             <a target = '_blank' href = '${leads[i]}'>     
+                 ${leads[i]}
+             </a>
+         </li>` // Template string
+
+     }
+
+        ulEl.innerHTML = listItems
+}
+
+
 
 deleteBtn.addEventListener("dblclick",function(){
     localStorage.clear()
     myLeads = []
-    renderLeads()
+    render(myLeads)
 })
 
 inputBtn.addEventListener("click",function(){
@@ -29,36 +49,12 @@ inputBtn.addEventListener("click",function(){
 
     //console.log(myLeads)
     localStorage.setItem("myLeads",JSON.stringify(myLeads))
-    renderLeads()
+    render(myLeads)
     
     
 })
 
-function renderLeads(){
-    let listItems = " "
 
-     for (let i = 0;i < myLeads.length ; i++){
-
-    //    listItems += "<li><a target = '_blank' href = '" + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
-    //     // Another Ways to acheive the above task
-    //     // create an element -> <li>
-    //     // set text content
-    //     // append to ul
-    //     // const li = document.createElement("li")
-    //     // li.textContent = myLeads[i]
-    //     // ulEl.append(li)
-    //     // But the first one is easier than the second
-         listItems += `
-         <li>
-             <a target = '_blank' href = '${myLeads[i]}'>     
-                 ${myLeads[i]}
-             </a>
-         </li>` // Template string
-
-     }
-
-        ulEl.innerHTML = listItems
-}
 
 
 
