@@ -9,12 +9,26 @@ const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 let myLeads = []
 const inputEl = document.querySelector("#input-el")
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+const deleteBtn = document.getElementById("delete-btn")
+if (leadsFromLocalStorage){
+    myLeads = leadsFromLocalStorage
+    renderLeads()
+}
+
+deleteBtn.addEventListener("dblclick",function(){
+    localStorage.clear()
+    myLeads = []
+    renderLeads()
+})
+
 inputBtn.addEventListener("click",function(){
     //console.log("Save btn clicked from addEventListener")
     //myLeads.push("www.example.com")
     myLeads.push(inputEl.value)
 
     //console.log(myLeads)
+    localStorage.setItem("myLeads",JSON.stringify(myLeads))
     renderLeads()
     
     

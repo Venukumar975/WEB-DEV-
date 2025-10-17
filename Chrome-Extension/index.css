@@ -10,6 +10,23 @@ div{
     text-align: center;
 }
 
+#container-1 {
+    text-align: center;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container-2{
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  
+
+}
+
 input {
   padding : 10px 10px;
   width : 100%;
@@ -23,14 +40,21 @@ input {
 
 button {
     height : 35px;
-    width : 80px;
-    margin-top : 20px;
+    width : 100px;
+    margin : 20px 10px;
     /* linear-graient works with background not background-color or backgroun-img */
     background : linear-gradient(to right , rgb(208, 20, 152),rgb(24, 89, 211));
     color : whitesmoke;
     font-weight: 600;
     font-size: medium;
     border-radius: 15px;
+    border : 2px solid rgb(128, 0, 113);
+}
+
+#delete-btn {
+
+  background: white;
+  color : rgb(0,128,0)
 }
 
 ul {
