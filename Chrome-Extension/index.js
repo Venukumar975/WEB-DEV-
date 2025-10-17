@@ -11,10 +11,24 @@ let myLeads = []
 const inputEl = document.querySelector("#input-el")
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 const deleteBtn = document.getElementById("delete-btn")
+const tabBtn = document.getElementById("tab-btn")
+
+
 if (leadsFromLocalStorage){
     myLeads = leadsFromLocalStorage
     render(myLeads)
 }
+
+const tabs = [
+    {url:"https://github.com/Venukumar975/WEB-DEV-/blob/main/Chrome-Extension/learned.txt"}
+]
+
+tabBtn.addEventListener("click", function(){
+    myLeads.push(tabs[0].url)
+    localStorage.setItem( "myLeads",JSON.stringify(myLeads) )
+    render(myLeads)
+
+})
 
 function render(leads){
     let listItems = " "
