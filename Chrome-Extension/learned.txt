@@ -1,4 +1,6 @@
-1 . linear-gradient can be applied for background not for background-color 
+1 . linear-gradient can be applied for background not for background-color . This is beacuse the term
+    background is a shorthand for all ' background-image , background-color ,...' so the linear-gradient property is seen as background-image by our dom
+    so we either use background-image : linear-gradient() or background : linear-gradient , Since it contains all properties about background (also background-image)
 
 2 . USE OF box-sizing (The box-sizing property "defines how the total size of an element is calculated "— i.e., whether width and height include padding and border or not.)
     say button {
