@@ -5,6 +5,7 @@ body{
     color : black;
     min-width : 400px;
     width : 100%;
+    border-radius: 13px;
 }
 
 div{
@@ -31,7 +32,8 @@ div{
 
 input {
   padding : 10px 10px;
-  width : 100%;
+  width : 80%;
+  max-width: 600;
   box-sizing: border-box;
   height : 40px;
   border-color: rgb(27, 195, 27);
@@ -75,6 +77,5 @@ li a {
 
     color : green;
 }
-
 
 

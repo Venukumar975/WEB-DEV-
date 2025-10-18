@@ -1,0 +1,38 @@
+1 .             ***************ABOUT JSON *************
+    JSON a.k.a Java Scirpt Object NOtation. Think about how we define an object in JS ,
+    let obj = {a : "hello" } simply an dictionary if we compare it with python data structures but it has additional functionanlitites like for a particular key 
+    we can even define an function {b : funtion (){ }} like that and keys can be anything that is an valid identifier . But JSON is an object its keys cant have functions and methods like obj.Username its simply an string
+    ---> typeof obj : js object , let obj = {name:"lvkldslk"}
+    ---> typeof obj2 : string  , let obj2 = '{"name":"lvkldslk"}'
+
+
+
+2 . JSON has two main methods namely :- JSON.stringify() , JSON.parse()
+    JSON.stringify() - converts an obj to JSon string
+    JSON.parse()     - converts the stringified obj back to its original form 
+
+    let obj = {name : "knaklamls" , ph : "9920998595"}
+    let json_str = JSON.stringify(obj)
+    console.log(json_str) -  {"name" : "knaklamls" , "ph" : 9920998595}
+    obj = JSON.parse(json_str) - {name : "knaklamls" , ph : "9920998595"}
+
+    Simpy remember JSON means a `string` . It has no methods its just data in string format 
+
+
+
+3 .             ******** addEventListener() ***********
+   when we want to listen to any events like when the user clicks an button or dblclicks it if we want to ensure to add some functionanlitites to those events 
+   we can go for onclick attribute and grad the respective elemetn but this onclick mostly works for clickable elements like input , buttons... , Say u built a car racing game and in that we can either have GUI controls where user must use mouse to click them for the car to operate or
+   another popular choice is to give the car controls to our keyboard where 'w' - means boost , 's' - means apply breaks .. like that some functionanlitites to our keys so using only onclick we cant give these functionanlitites to our keys since it is only works for clickable elements but .addEventListener() can do this task 
+   SO it is more flexible to do;
+        
+    |           Case                           |       Use            |
+    | ---------------------------------------- | -------------------- |
+    | Small, simple HTML demo                  | `onclick()`            |
+    | Multiple actions on same element         | `addEventListener()` |
+    | Non-click events (input, keypress, etc.) | `addEventListener()` |
+    | Clean separation of HTML & JS            | `addEventListener()` |
+
+
+
+4 . To use an extension we have developed just ON the developer options in manage-extensions in any web browser and upload ur project file and use it .
