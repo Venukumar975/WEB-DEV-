@@ -1,0 +1,30 @@
+1 .                ************ What to use 'let / const ' for grabbing html elements ************
+
+   Using `const` for grabbign elements is preferred becoz using let comes with its own problems like FOr eg; say we use let heading = document.getElementById("heading")
+   and in future there is a high chance for someone to use the same variable name heading for assigning another data {array,object,string,int,Bigint}, heading = "Welcome" and this will overwrite over previous initialisation
+   and we cant do any furhter DOM manipulations using `heading` variable .
+
+2 . When using import / export keywords in modules of our project , We need to specify type = "module" attribute in the <script/> tag along with `src` attribute.Since EC6 script supports modularity in js
+
+3 . EC6 script ---> ECMAS Script which was introduced in 2015 and supports modularity in js like import/export , arrow-functions , and many more.....
+
+4 .            ************** About Centering an div element **************
+
+   This is important , to know about how to center our div elements in css . Our web browser knows infront the actual width of our body or screen-size(viewport) so centering an div horizontally is easy , we can simply use `margin-left:auto ; margin-right:auto` and our browser takes
+   care of centering it horizontally since it knows the actual max-width it just subtracts the `width of div element` (note : if u have'nt specified the width for an div element it takes the complete space from left to rigth u can check this by giving it a bordre initially ) and allocate spaces on left and right equally.
+
+   But this approach fails for vertical alignment { margin-top : auto ; margin-bottom : auto } this one fails to center our div element .
+   Cuz Our browser doenst know the actual height of our page. How so u might have this doubt since it  knows the width why not height? right so the problem is the height is never fixed unlike width (depends on device like pc , phone) , when we open any website what we do for navigation we either click buttons or ``scroll up or down`` so when we are scrolling and after if u add more info to it vertically
+   the hegith again changes so thats why u cant make ur browser remember the heihgt property , Also go and learn about 'vh' variant of 'px'(not variant but they have some connection or similarity)
+
+   So for the sole purpose of centering our containers like div there are some special css layout algo's like " flex-box ,......." Using them we can do this 
+
+
+5 . Note the inbuilt constructors in js start with Capital letter For eg, Object() , Date() , Array() , Math() , Number()
+    Number() - used to convert a string to Number
+
+6 . Math.random() always gives values in between (0,1) so if u want to produce random `integers` from 0 to 11 u should use;
+    Math.floor(Math.random()*11)  since the max value it can give u is 11.9999999 u should use floor same goes for min-value. 
+
+7 . 
+   
