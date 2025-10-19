@@ -8,7 +8,7 @@ body{
 }
 
 #container {
-    background: black;
+    background: linear-gradient(to right,grey, black,grey);
     border : 5px solid whitesmoke;
     border-radius: 15px;
     height : 400px;
@@ -36,10 +36,19 @@ h1{
     margin : 10px;
 }
 
+img {
+    height : 30px;
+    background: whitesmoke;
+    box-shadow: 15px 10px 20px rgba(0,0,0,0.2);
+}
 
-
-
-
+img:hover{
+    transform: translateY(5px) translateX(5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    height : 35px;
+    width : 40px;
+    transition: all 0.45s ease;
+}
 
 
 

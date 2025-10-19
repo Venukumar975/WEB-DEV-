@@ -11,16 +11,19 @@ setInterval(function(){
 // So initially to display the results we need to grab the html elements first , So do that
 
 const name = document.getElementById("name")
-let symbol = document.getElementById("symbol")
-let price = document.getElementById("price")
-let time = document.getElementById("time")
-
+const symbol = document.getElementById("symbol")
+const price = document.getElementById("price")
+const time = document.getElementById("time")
+let initial_price = 0
 function renderStockData(stockData){
    
     const {Name ,Symbol, Price , Time } = stockData
     name.innerText = Name
     symbol.textContent = Symbol
-    price.innerHTML = Price
+
+    price.innerHTML = Price > initial_price ? `${Price} <img src = "./up.jpg" alt = "profit" />`: 
+                      `${Price} <img src = "./down.webp" alt = "profit" />`
+    initial_price = Price
     time.innerHTML = Time
 
 }
