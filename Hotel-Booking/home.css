@@ -1,0 +1,72 @@
+body{
+    background: rgb(233, 238, 239);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#Our-site {
+    border: 4px solid black;
+    background-image: url('../static/Hotel-main.jpg');
+    height : 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius : 10px;
+    margin : 0px 10px;
+}
+section{
+    border: 4px so
+    lid black;
+
+}
+#header {
+    display: flex;
+    gap : 80px;
+    justify-content: center;
+    align-items: center;
+    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border : 4px solid black;
+    margin : 5px;
+}
+
+#hotels {
+    border : 4px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 0px 100px;
+    padding : 10px 15px;
+}
+
+#chennai , #hyd , #mumbai , #vizag {
+    border-radius : 20px;
+    height : 250px;
+    width : 25vw;
+    border : 2px solid black;
+
+}
+
+#chennai {
+    background-image: url("../static/Hotel-chennai.jpg");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 10px 20px lightblue;
+}
+#hyd {
+    background-image: url("../static/Hotel-hyd.jpg");
+    background-position: center;
+    background-size: cover;
+
+
+}
+#mumbai {
+    background-image: url("../static/Hotel-mumbai.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+#vizag {
+    background-image: url("../static/Hotel-vizag.webp");
+    background-position: center;
+    background-size: cover;
+
+}
