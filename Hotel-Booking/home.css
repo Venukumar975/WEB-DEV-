@@ -12,10 +12,60 @@ body{
     background-position: center;
     border-radius : 10px;
     margin : 0px 10px;
+    position: relative;
+}
+#quote {
+    position: absolute;
+    font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size :xx-large;
+    font-weight: 500;
+    top : 5%;
+    left : 35%;
+    color : white;
+    
 }
 section{
     border: 4px so
     lid black;
+
+}
+
+#search-bar {
+    border: 4px solid black;
+    display: flex;
+    align-items: center;
+    width : 580px;
+    height : 25px;
+    padding : 5px 0;
+    border-radius: 20px;
+    position: absolute;
+    top : 25%;
+    left : 30%;
+    background-color: white;
+}
+#locations , #hotels {
+    background-color: rgb(191, 187, 187);
+    border-radius: 15px;
+    padding : 1px 7px;
+    margin-left : 6px;
+    height: 25px;
+
+}
+
+#search {
+    background-color: rgb(150, 216, 238);
+    border-radius: 15px;
+    padding : 1px 7px;
+    margin-left: auto;
+    margin-right: 6px;
+    height : 25px;
+}
+
+#text {
+    position: absolute;
+    top : 45%;
+    color : white;
+    left : 3%;     
 
 }
 #header {
@@ -28,7 +78,7 @@ section{
     margin : 5px;
 }
 
-#hotels {
+#Hotels {
     border : 4px solid black;
     display: flex;
     justify-content: center;
