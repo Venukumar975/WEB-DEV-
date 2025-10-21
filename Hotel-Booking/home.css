@@ -2,16 +2,19 @@ body{
     background: rgb(233, 238, 239);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+p {
+    margin : 5px;
+}
 
 #Our-site {
-    border: 4px solid black;
+    /*border: 4px solid black;*/
     background-image: url('../static/Hotel-main.jpg');
     height : 500px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius : 10px;
-    margin : 0px 10px;
+    margin : 25px 10px;
     position: relative;
 }
 #quote {
@@ -31,13 +34,13 @@ section{
 }
 
 #search-bar {
-    border: 4px solid black;
+    /*border: 4px solid black;*/
     display: flex;
     align-items: center;
-    width : 580px;
-    height : 25px;
+    width : 590px;
+    height : 30px;
     padding : 5px 0;
-    border-radius: 20px;
+    border-radius: 25px;
     position: absolute;
     top : 25%;
     left : 30%;
@@ -60,6 +63,47 @@ section{
     margin-right: 6px;
     height : 25px;
 }
+#discover , #contact {
+    border: 2px solid black;
+    color : black;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 5px;
+    background-color: whitesmoke;
+    font-weight: 500;
+}
+#discover{
+    top : 65%;
+    left : 3%;
+    border-radius: 20px;
+    height : 30px;
+    padding : 0px 6px;
+
+}
+#contact{
+    top : 77%;
+    left : 3%;
+    border-radius: 20px;
+    padding : 5px 5px;
+    height : 30px;
+    padding : 0px 6px;
+}
+#reviews{
+    position: absolute;
+    display: flex;
+    border : 2px solid rgb(17, 15, 15);
+    flex-direction: column;
+    justify-content: start;
+    gap : 0px;
+    width : 180px;
+    padding : 5px 10px;
+    background-color: white;
+    border-radius: 30px;
+    top : 65%;
+    left : 15%;
+}
 
 #text {
     position: absolute;
@@ -74,24 +118,26 @@ section{
     justify-content: center;
     align-items: center;
     font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border : 4px solid black;
+    /*border : 4px solid black;*/
     margin : 5px;
 }
 
 #Hotels {
-    border : 4px solid black;
+    /*border : 4px solid black;*/
     display: flex;
     justify-content: center;
     align-items: center;
     gap : 0px 100px;
     padding : 10px 15px;
+    margin-top : 25px;
 }
 
 #chennai , #hyd , #mumbai , #vizag {
     border-radius : 20px;
     height : 250px;
     width : 25vw;
-    border : 2px solid black;
+    /*border : 2px solid black;*/
+    position: relative;
 
 }
 
@@ -119,4 +165,10 @@ section{
     background-position: center;
     background-size: cover;
 
+}
+.places {
+    position: absolute;
+    top : 60%;
+    left : 5%;
+    color: whitesmoke;
 }
