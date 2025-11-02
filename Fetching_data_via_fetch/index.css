@@ -1,21 +1,49 @@
 body{
     padding : 20px 20px;
     background-image: linear-gradient(to right,grey , black);
+    text-align: center;
+}
+
+#input-div{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input{
+    width : 300px;
+    border-radius: 20px;
+    padding : 10px 10px;
+    font-size : medium;
+    text-align: center;
+    box-shadow: 10px 10px 30px black;
 }
 
 
 
-
-
-
-
-
-
+button{
+    width : 150px;
+    border-radius: 20px;
+    padding : 10px;
+    font-size : medium;
+    text-align: center;
+    margin : 25px 0px;
+    box-shadow: 10px 10px 20px black;
+    cursor: pointer;
+    color : rgb(78, 70, 70);
+}
+button:hover{
+    transition : all 0.4s ease;
+    box-shadow: 0 12px 24px rgba(147, 66, 66, 0.3);
+}
 
 #pokemonImage{
-    height : 200px;
-    width : 200px;
+    height : 250px;
+    width : 300px;
     display: block;
+    border : 3px solid black;
+    border-radius : 15px;
 }
 
 
