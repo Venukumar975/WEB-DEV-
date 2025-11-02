@@ -10,12 +10,29 @@ body{
     justify-content: center;
     flex-direction: column;
 }
+#poke-div{
+    margin : 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 100px;
+}
+#hp1-bar,#hp2-bar{
+    height : 25px;
+    width : 250px;
+    border : 2px solid blue;
+    margin : 10px auto;
+    border-radius: 10px;
+    background-color : green;
+}
 
 input{
     width : 300px;
     border-radius: 20px;
     padding : 10px 10px;
-    font-size : medium;
+    font-size : large;
+    font-weight: 500;
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     box-shadow: 10px 10px 30px black;
 }
@@ -36,14 +53,27 @@ button{
 button:hover{
     transition : all 0.4s ease;
     box-shadow: 0 12px 24px rgba(147, 66, 66, 0.3);
+    transform: translateY(5px)
 }
 
-#pokemonImage{
+img{
+    height : 200px;
+    width : 280px;
+    display: block;
+    border : 3px solid black;
+    border-radius : 15px;
+    margin : 0 auto;
+    box-shadow: 0 0 20px whitesmoke;
+    
+}
+section{
     height : 250px;
     width : 300px;
     display: block;
     border : 3px solid black;
     border-radius : 15px;
+    padding : 10px 10px;
+
 }
 
 
