@@ -10,11 +10,11 @@ const server = http.createServer(async (req,res)=>{
 
   if (req.url === '/api' && req.method === 'GET'){
     res.setHeader('Content-Type','application/json')
-    res.statusCode = 900
+    res.statusCode = 200
     res.end(JSON.stringify(destinations))
   }
   else{
-    res.end('Hello from the server')
+    res.end('Hello from the server!!@')
   }
 })
 
