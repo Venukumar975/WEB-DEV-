@@ -1,0 +1,1 @@
+1. In Node js there is no dom manipulation
