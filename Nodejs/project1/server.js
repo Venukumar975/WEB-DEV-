@@ -4,10 +4,13 @@ import { getDataFromDB } from './database.js'
 
 
 const PORT = 6000
-const destinations = await getDataFromDB()
 
-const server = http.createServer((req,res)=>{
+const server = http.createServer(async (req,res)=>{
+  const destinations = await getDataFromDB()
+
   if (req.url === '/api' && req.method === 'GET'){
+    res.setHeader('Content-Type','application/json')
+    res.statusCode = 900
     res.end(JSON.stringify(destinations))
   }
   else{
