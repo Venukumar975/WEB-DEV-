@@ -1,17 +1,15 @@
 import http from 'node:http'
 import path from 'node:path'
 import { serveStatic } from './utils/serveStatic.js'
+import { sendResponse }  from './utils/sendResponse.js'
 
 
 const __dirname = import.meta.dirname
 
 const PORT = 8000
-const server = http.createServer((req,res)=>{
-  serveStatic(__dirname)
-  res.setHeader('Content-Type','text/html')
-  res.statusCode = 200
-  //res.writeHead(200,{'Content-Type':'text/html'})
-  res.end('<html> <h1> This server is working </h1></html>')
+const server = http.createServer(async (req,res)=>{
+   await serveStatic(req,res,__dirname)
+  
   
 })
 
