@@ -1,12 +1,17 @@
 import http from 'node:http'
 import path from 'node:path'
 import { serveStatic } from './utils/serveStatic.js'
-import { sendResponse }  from './utils/sendResponse.js'
+import { getData } from './utils/getData.js'
 
-import fs from 'node:fs/promises'
+
 const __dirname = import.meta.dirname
 
+
+console.log(await getData())
+
 const PORT = 8000
+
+
 const server = http.createServer(async (req,res)=>{
     await serveStatic(req,res,__dirname)
   
