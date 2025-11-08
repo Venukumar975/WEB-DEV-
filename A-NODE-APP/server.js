@@ -3,13 +3,12 @@ import path from 'node:path'
 import { serveStatic } from './utils/serveStatic.js'
 import { sendResponse }  from './utils/sendResponse.js'
 
-
+import fs from 'node:fs/promises'
 const __dirname = import.meta.dirname
 
 const PORT = 8000
 const server = http.createServer(async (req,res)=>{
-   await serveStatic(req,res,__dirname)
-  
+    await serveStatic(req,res,__dirname)
   
 })
 
