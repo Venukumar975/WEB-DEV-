@@ -3,6 +3,8 @@ import path from 'node:path'
 import { serveStatic } from './utils/serveStatic.js'
 import { getData } from './utils/getData.js'
 import { getHandlers } from './handlers/routeHandlers.js'
+import { postHandlers } from './handlers/routeHandlers.js'
+
 const __dirname = import.meta.dirname
 
 
@@ -17,6 +19,9 @@ const server = http.createServer(async (req,res)=>{
    if (req.url.startsWith('/api')){
     if(req.method === 'GET'){
         return await getHandlers(res)
+    }
+    else if(req.method === 'POST'){
+     postHandlers(req,res)
     }
    }
 

@@ -14,3 +14,8 @@ export async function getHandlers(res){
 
 
 //PostHandlers
+
+export  function postHandlers(req,res) {
+    console.log("POST request received");
+    
+}
