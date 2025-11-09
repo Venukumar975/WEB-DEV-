@@ -2,8 +2,7 @@ import http from 'node:http'
 import path from 'node:path'
 import { serveStatic } from './utils/serveStatic.js'
 import { getData } from './utils/getData.js'
-
-
+import { getHandlers } from './handlers/routeHandlers.js'
 const __dirname = import.meta.dirname
 
 
@@ -13,7 +12,23 @@ const PORT = 8000
 
 
 const server = http.createServer(async (req,res)=>{
-    await serveStatic(req,res,__dirname)
+
+
+   if (req.url.startsWith('/api')){
+    if(req.method === 'GET'){
+        return await getHandlers(res)
+    }
+   }
+
+
+
+
+
+    else if (!req.url.startsWith('/api')){
+
+     await serveStatic(req,res,__dirname) // serving index file and html files
+
+    }
   
 })
 
