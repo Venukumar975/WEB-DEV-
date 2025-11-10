@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@electric-sql/pglite": "^0.3.14"
+  },
+  "name": "databases",
+  "version": "1.0.0",
+  "description": "Working on Databases",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+  "start": "nodemon --ext js,sql --watch query.sql  index.js"
+}
+,
+  "author": "Pichika venu",
+  "license": "ISC"
+}

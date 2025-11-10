@@ -1,5 +1,5 @@
 import { PGlite } from '@electric-sql/pglite';
-import fs from 'fs';
+import fs from 'node:fs';
 
 (async () => {
   const db = new PGlite();
