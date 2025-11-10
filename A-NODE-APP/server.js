@@ -21,7 +21,8 @@ const server = http.createServer(async (req,res)=>{
         return await getHandlers(res)
     }
     else if(req.method === 'POST'){
-     postHandlers(req,res)
+     await postHandlers(req,res)
+     return 
     }
    }
 
