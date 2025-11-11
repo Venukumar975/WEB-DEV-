@@ -199,6 +199,7 @@ select brand , model , year from cars
 /*
 
                  LIMIT 
+
   Limit is used to set the no of rows we want to be showed ( just like dataset.head(5) in pandas )
 
 select brand , model , price from cars
@@ -220,8 +221,128 @@ select brand , model , price from cars
 
                         COUNT AND SUM
 
+NOTE : Unlike all clauses we have seen these are aggregate fucntions not clauses 
+
+select count(*) as total_sold from cars 
+ where sold is true
+
+select sum(price) as total_earnings from cars
+ where sold is true
+
+
 */
 
+------------------------------------------------------------------------------------------------------
+
+/*
+
+                MAX , MIN , AVG
+
+select max(price) as most_expensive from cars
+ where sold is true
+
+select avg(price) as Avg_price_bently from cars
+ where brand = 'Bentley'
+
+select ceil(avg(price)) as Avg_price_bently from cars
+ where brand = 'Bentley'
+
+ 
+select floor(avg(price)) as Avg_price_bently from cars
+ where brand = 'Bentley'
+
+select ceil(avg(price)) as AVG, min(price) as MIN, max(price) as MAX from cars
+ where sold is true
+
+
+NOTE : All these aggregate functions look up  over the entire column and brigns down the output or result to one
+       since min , max ,avg always give a single output
+
+*/
+
+-----------------------------------------------------------------------------------------------------------------------
+
+/*
+                     GROUP BY 
+
+using this we can perform more complex aggregate opertions , like counting no of different types of brands / models of cars individually 
+jsut like for eg counting no of unique models of cars in our db
+
+select brand , count(brand) as brand_count from cars
+ GROUP BY brand
+
+select condition , count(condition) from cars
+ group by condition
+
+
+select brand , count(brand) as brand_count ,
+       floor(avg(price)) as Avg_price from cars
+       where sold is true
+       group by brand
+       order by Avg_price desc
+
+
+*/
+
+----------------------------------------------------------------------------------------------------------------------
+
+/*
+                           HAVING
+
+This was introduced to write conditions on aggregated columsn ( for eg where count_brand > 1 - throws an error ) so we 
+use this clause to write conditions on aggregated cols
+
+select brand , count(brand) as brand_count ,
+       floor(avg(price)) as Avg_price from cars
+       where sold is true
+       group by brand
+       HAVING count(brand) > 1
+
+
+select year , count(year) as car_count , 
+            max(price) , min(price) from cars
+            where sold is true
+            group by year
+            having count(year) > 1
+            order by car_count
+
+*/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+
+                                CHALLENGES
+
+
+select brand , model , year from cars
+ where sold is false 
+ order by year asc
+ limit 5
+
+SELECT color, COUNT(color) AS car_colors
+FROM cars
+WHERE sold IS FALSE
+GROUP BY color
+HAVING COUNT(color) > 2
+ORDER BY car_colors DESC
+
+*/
+
+--------------------------------------------------------------------------------------------------------
+
+/*
+
+                              MANIPULATING DATA 
+
+Simply data manipulation commands ( dml ) or CRUD commands , these are 4 main commands for data manipulation
+
+*/
+
+
+
+
+  
 
 
 
