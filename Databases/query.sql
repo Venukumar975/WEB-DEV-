@@ -138,8 +138,92 @@ select brand , color , year
  where year in (1961,1963) 
  and condition > 2
 
- 
+
+select brand , sold , year from cars 
+ where (
+  brand not in ('Ford','Dodge') or 
+  price < 50000 ) and 
+  sold = false
+
 */
- 
+
+---------------------------------------------------------------------------------------------------------------
+
+--                  CHALLENGES 
+/*
+select brand , model ,color  from cars
+where color like '%red%' and brand != 'Ferrari' and
+ sold is false
+
+
+select brand , color , model from cars
+ where color not in ('red','blue','white') and 
+ brand not in ('Aston Martin','Bentley','Jaguar') and
+ sold is false
+
+
+select brand , model , year , sold from cars
+  where ((brand = 'Dodge' and year between 1960 and 1969)
+  or 
+  (brand in ('Ford','Triumph') and year between 1970 and 1979))
+  and sold is false
+
+
+*/
+
+---------------------------------------------------------------------------------------------------------------------
+/*
+        Order and Aggregates
+Order By : which is useful to sort out our results using different cols
+
+select brand , model , year from cars
+ order by brand
+
+
+ select brand , model , year from cars
+ order by brand desc
+
+
+select brand , model , condition , price from cars
+ order by condition desc , price 
+
+select brand , model , year from cars
+ where sold is false and 
+ condition != 5
+ order by condition desc,price
+
+*/
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+/*
+
+                 LIMIT 
+  Limit is used to set the no of rows we want to be showed ( just like dataset.head(5) in pandas )
+
+select brand , model , price from cars
+ order by price desc
+ limit 1
+
+
+select brand , model , price from cars
+ where color like '%red%' and 
+ sold is false
+ order by price asc
+ limit 5
+
+
+*/
+
+------------------------------------------------------------------------------------------------------------------------------------/*
+/*
+
+                        COUNT AND SUM
+
+*/
+
+
+
+
 
 
