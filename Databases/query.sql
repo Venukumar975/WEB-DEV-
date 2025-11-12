@@ -337,9 +337,23 @@ ORDER BY car_colors DESC
 
 Simply data manipulation commands ( dml ) or CRUD commands , these are 4 main commands for data manipulation
 
+NOTE : these commands dont return data from the database , so these changes are applied inplace not on an duplicated db , so in general an Admin can only do these operations.
+
+1. INSERT INTO 
+
+INSERT INTO cars(
+  brand , model , year , price , color , condition , sold
+) values(
+  'Porshce','944 Turbo' , 1989 , 49800 , 'white' , 4,FALSE
+)
+
+2. UPDATE EXISTING RECORDS
+
+3. DELETE RECORDS
+
+DELETE from cars 
+   where sold is true
 */
-
-
 
 
   

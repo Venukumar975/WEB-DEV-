@@ -81,8 +81,11 @@ import fs from 'fs';
   // Load the SQL file
   const query = fs.readFileSync('query.sql', 'utf8');
 
-  // Executing simple queries for sections 1 - 3
-  const response = await db.query(query);
+  // for section - 4 execute the CRUD operations
+  await db.exec(query)
+
+  // Display data from the table after performing CRUD Operations
+  const response = await db.query('SELECT id , brand ,condition , year , price , sold FROM cars');
 
   console.clear();
   console.table(response.rows);
