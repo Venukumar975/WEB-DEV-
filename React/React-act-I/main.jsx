@@ -4,9 +4,12 @@ import WelcomeFun , { LoadReactIcon as LoadImg } from "./index.jsx"
 
 const root = createRoot(document.getElementById("root"))
 
-// In react when we want to return multiple elements we should wrap them up in a parent element like div ( this is called random housekeeping )
-root.render(
-    <main>
+
+
+// JS doesnt hoist arrow functions
+const AboutReact = ()=> {
+    return (
+   <main>
         <WelcomeFun/>
 
         <LoadImg/>
@@ -23,5 +26,31 @@ root.render(
         
 
     </main>
+    )
+}
+
+const Page = () => {
+    return (
+        <main>
+             <h1> Why am I excited to work with React </h1>
+
+            <ol>
+                <li>React is very popular </li>
+                <li>It has good abstraction </li>
+                <li>Has large developing community</li>
+                <li>Used by tech Giants</li>
+                <li>Fun to work with</li>
+            </ol>
+        </main>
+       
+    )
+}
+// In react when we want to return multiple elements we should wrap them up in a parent element like div ( this is called random housekeeping )
+root.render(
+    <main>
+        <AboutReact/>
+        <Page/>
+    </main>
+    
     
 )
