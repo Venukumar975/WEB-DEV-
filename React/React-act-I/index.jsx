@@ -12,6 +12,6 @@ export default function WelcomeFun(){
 
 export function LoadReactIcon(){
     return (
-        <img src = "react-logo-1.jpg" alt = 'React-Logo'/>
+        <img src = "react-logo-1.jpg" alt = 'React-Logo' className="logo"/>
     )
 }
