@@ -7,6 +7,7 @@ const root = createRoot(document.getElementById("root"))
 
 
 // JS doesnt hoist arrow functions
+// Also React components ( functions which return react elements ) should follow PascalCase convention
 const AboutReact = ()=> {
     return (
    <main>
@@ -14,7 +15,7 @@ const AboutReact = ()=> {
 
         <LoadImg/>
         <h1>
-           Fun facts about <span />React!
+           Fun facts about <span>React!</span>
         </h1>
         <ul>
             <li>First release in 2013</li>
@@ -32,7 +33,11 @@ const AboutReact = ()=> {
 const Page = () => {
     return (
         <main>
-             <h1> Why am I excited to work with React </h1>
+            <header>
+                        <LoadImg/>
+            </header>
+           
+             <h1> Why am I excited to work with <span>React!</span> </h1>
 
             <ol>
                 <li>React is very popular </li>
@@ -41,6 +46,9 @@ const Page = () => {
                 <li>Used by tech Giants</li>
                 <li>Fun to work with</li>
             </ol>
+            <footer>
+                Copyright @ 2025 Unknown development . All rights reserved
+            </footer>
         </main>
        
     )
@@ -48,8 +56,8 @@ const Page = () => {
 // In react when we want to return multiple elements we should wrap them up in a parent element like div ( this is called random housekeeping )
 root.render(
     <main>
-        <AboutReact/>
-        <Page/>
+        {/*<AboutReact/>*/}
+        <Page></Page>  {/* tags can be either self closing or paired tags */}
     </main>
     
     
