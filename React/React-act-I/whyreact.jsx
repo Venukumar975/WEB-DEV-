@@ -1,6 +1,6 @@
 import {Header} from './header.jsx'
 import React from "react"
-
+import Footer from './footer.jsx'
 
 const WhyReact = () => {
     return (
@@ -15,9 +15,7 @@ const WhyReact = () => {
                 <li>Used by tech Giants</li>
                 <li>Fun to work with</li>
             </ol>
-            <footer>
-                Copyright @ 2025 Unknown development . All rights reserved
-            </footer>
+            <Footer/>
         </main>
        
     )
